@@ -1,2 +1,4 @@
 Variables.ps1
 Variables.psm1
+*.swp
+*.swo
