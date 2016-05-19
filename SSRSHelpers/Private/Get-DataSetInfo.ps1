@@ -5,7 +5,7 @@ function Get-DataSetInfo {
 		[string] $DataSetName
 	)
 
-	$Rdl = [xml] (Get-Content $FilePath.FullName)
+	$Rdl = [xml] (Get-Content $RdlFilePath.FullName)
 	$DataSet = $Rdl.Report.DataSets.DataSet | Where-Object { $_.Name -eq $DataSetName }
 	$DataSetInfo = New-Object System.Object
 

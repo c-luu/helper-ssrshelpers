@@ -1,5 +1,4 @@
-# Import-Module $PSScriptRoot\..\SSRSHelpers -Force
-Import-Module SSRSHelpers
+Import-Module $PSScriptRoot\..\SSRSHelpers -Force
 
 # NOTE: This is to test private items
 InModuleScope SSRSHelpers {
@@ -30,7 +29,7 @@ InModuleScope SSRSHelpers {
 </Report>'
 		
 		It "Returns the test DataSetInfo object" {
-			Get-DataSetInfo -RdlFilePath "TestDrive:\TestReportName.rdl" -DataSetName "TestDataSetName" | Should Be $TestDataSetInfo
+			Get-DataSetInfo -RdlFilePath $TestRdlPath -DataSetName "TestDataSetName" | Should Be $TestDataSetInfo
 		}
 	}
 }
