@@ -1,4 +1,5 @@
-# Import-Module Variables
+<# 
+Import-Module Variables
 
 function Get-RDLDataSetInfo ([string] $reportName, [string] $dataSetName) {
 
@@ -31,7 +32,7 @@ $rdlCollection | Out-GridView
 
 Write-Host "Done"
 }
-
+#>
 
 
 
